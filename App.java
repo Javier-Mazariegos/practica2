@@ -1,3 +1,5 @@
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.util.*;
 
 
@@ -34,9 +36,9 @@ public class App {
         } while(contador < 10);
     }
 
-    public static double totalDebitos()
+    public static Double totalDebitos() //
     {
-        int tDebitos = 0;
+        Double tDebitos = 0.0;
         for(int i=0; i< debitos.length; i++)
         {
             tDebitos += debitos[i];
@@ -44,9 +46,9 @@ public class App {
         return tDebitos;
     }
 
-    public static double totalCreditos()
+    public static Double totalCreditos()
     {
-        int tCreditos = 0;
+        double tCreditos = 0;
         for(int i=0; i< creditos.length; i++)
         {
             tCreditos += creditos[i];
@@ -54,12 +56,12 @@ public class App {
         return tCreditos;
     }
 
-    public static double saldo()
+    public static Double saldo()
     {
         return (totalDebitos() - totalCreditos());
     }
 
-    public static double promedioDebito()
+    public static Double promedioDebito()
     {
         contador = 0;
         for(int i = 0; i< debitos.length; i++)
@@ -72,7 +74,7 @@ public class App {
         return (totalDebitos()/contador);
     }
 
-    public static double debitoGrande()
+    public static Double debitoGrande()//
     {
         double debito =0;
         debito = debitos[0];
